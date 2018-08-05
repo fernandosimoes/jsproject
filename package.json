@@ -1,0 +1,54 @@
+{
+  "name": "jsproject",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "build": "gulp build && webpack -p && gulp copy",
+    "dev": "gulp dev && webpack -d && gulp copy",
+    "dev:watch": "gulp dev && webpack -d && gulp copy && gulp watch",
+    "js": "webpack -d",
+    "js:watch": "webpack --watch",
+    "js:build": "webpack -p",
+    "server": "gulp server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandosimoes/jsproject.git"
+  },
+  "keywords": [],
+  "author": "Fernando Simoes",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.1.0",
+    "gulp-file-copy": "0.0.1",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-serve": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "navigo": "^7.1.2",
+    "webpack": "^3.12.0"
+  },
+  "dependencies": {
+    "alertifyjs": "^1.11.1",
+    "axios": "^0.18.0",
+    "jquery": "^3.3.1",
+    "vanilla-datatables": "^1.6.14"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
+}

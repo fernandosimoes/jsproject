@@ -1,0 +1,88 @@
+
+.header {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  padding: 0 50px;
+
+  .logo {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    float: left;
+
+    img {
+      height: 60px;
+      width: 60px;
+    }
+
+    span {
+      font-size: 20px;
+      margin-left:  35px;
+    }
+  }
+
+  .dropdownmenu {
+    display: none;
+    padding-top: 15px;
+    position: absolute;
+    top: 60px;
+    width: 250px;
+    background: $white;
+    right: 0;
+
+    li {
+      border-left: 1px solid $bordercolor;
+      border-right: 1px solid $bordercolor;
+      padding: 15px;
+
+      &:first-child {
+        border-left: 1px solid $bordercolor;
+        border-right: 1px solid $bordercolor;
+        border-top: 1px solid $bordercolor;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid $bordercolor;
+        border-left: 1px solid $bordercolor;
+        border-right: 1px solid $bordercolor;
+        border-top: 1px solid $bordercolor;
+      }
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+  .usermenu {
+    float: right;
+    position: relative;
+
+    .firstli {
+      align-items: center;
+      cursor: url('../img/cursor.png' ), pointer;
+      display: flex;
+
+      .initials {
+        border-radius: 80px;
+        border: 1px solid;
+        float: left;
+        font-size: 25px;
+        margin-right: 15px;
+        padding: 15px;
+      }
+
+      .name {}
+      .icon {
+        margin-left: 5px;
+      }
+
+      &:hover {
+        .dropdownmenu {
+          display: block;
+        }
+      }
+    }
+  }
+}
