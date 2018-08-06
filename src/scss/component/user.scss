@@ -1,20 +1,21 @@
 .users {
   position: relative;
+
   .userTitle {
-    display: flex; 
     align-items: center;
+    display: flex; 
   }
+
   .userline {
-    width: 100%;
     border: 1px solid $mediumgray;
     margin-left: 45px;
     margin-right: 250px;
+    width: 100%;
   }
 
-
   h2 {
-    margin:  15px 0;
     font-size: 40px;
+    margin:  15px 0;
   }
 
   .dataTable-search {
@@ -24,48 +25,43 @@
   }
 }
 
-
-
-#usertable {
-  .table--title {
-      
-  }
-  
-}
 .dataTable-table {
-    tr {
-      
-      td {
-        vertical-align: middle;
+  tr {
+    height: 60px;
 
-        .posts {
-          color: $green;
-          cursor: url('../img/cursor.png' ), pointer;
+    td {
+      vertical-align: middle;
 
-        }
-        .albums {
-          @extend .posts;
-        }
-      }
-
-      height: 60px;
-      .trash {
+      .posts {
         color: $green;
         cursor: url('../img/cursor.png' ), pointer;
-        display: none;
+
       }
-      &:nth-child(even) {
-        background: $lightgray
-      };
-      &:nth-child(odd) {
-        background: $white
+      .albums {
+        @extend .posts;
       }
-      &:hover {
-        background: $mediumgray;
-        .trash {
-          display: block;
-        }
+    }
+
+    .trash {
+      color: $green;
+      cursor: url('../img/cursor.png' ), pointer;
+      display: none;
+    }
+
+    &:nth-child(even) {
+      background: $lightgray;
+    };
+
+    &:nth-child(odd) {
+      background: $white;
+    }
+
+    &:hover {
+      background: $mediumgray;
+
+      .trash {
+        display: block;
       }
     }
   }
-  
+}
