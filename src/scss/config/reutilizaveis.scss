@@ -1,3 +1,11 @@
+
+@mixin responsive($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+
 $green :#1abc9c;
 $green60 :rgba(26,188,156, 0.3);
 $contentWidth: 1920px;
@@ -7,6 +15,11 @@ $mediumgray: #e3e3e3;
 $white: #fff;
 $darkgray: #333333;
 $black: #000;
+$xs: 575px;
+$small: 767px;
+$medium: 991px;
+$large: 1199px;
+
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -16,13 +29,20 @@ body {
   margin: 0 auto;
   width: auto;
   padding: 0 50px;
+  @include responsive($medium) {
+    padding: 0 35px
+  }
+  @include responsive($small) {
+    padding: 0 25px;
+  }
+  @include responsive($xs) {
+    padding: 0 15px;
+  }
 }
 
 
-// @media (max-width: 575px) { ... }
 
-// @media (max-width: 767px) { ... }
-
-// @media (max-width: 991px) { ... }
-
-// @media (max-width: 1199px) { ... }
+    // @include responsive($large) {}
+    // @include responsive($medium) {}
+    // @include responsive($small) {}
+    // @include responsive($xs) {}

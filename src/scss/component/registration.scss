@@ -25,6 +25,12 @@
     justify-content: space-between;
     margin: 15px 0;
 
+    @include responsive($small) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .info {
         display: flex;
         align-items: center;
@@ -33,22 +39,43 @@
         font-size: 80px;
         color: $green;
         flex-direction: column;
+
+        @include responsive($small) {
+            width: 100%;
+        }
         
         h3 {
             font-size: 25px;
             align-self: flex-start;
             margin-bottom: 35px;
+            @include responsive($small) {
+                margin: 0 auto 15px;
+            }
+
         }
 
         p {
             font-size: 20px;
             color: $darkgray;
             margin-left: 20px;
+            
+            @include responsive($large) {
+                font-size: 16px;
+            }
+            @include responsive($medium) {
+                margin: 15px 0;
+            }
         }
 
         .icon-details {
             display: flex;
             flex-direction: row;
+
+            @include responsive($small) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 }
@@ -58,6 +85,10 @@
     width: 80%;
     padding-top: 40px;
     margin: 0 auto;
+
+    @include responsive($large) {
+        width: 90%;
+    }
 }
 
 .columns {
@@ -65,16 +96,26 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    @include responsive($small) {
+        flex-direction: column;
+    }
 
     .column {
 
         width: 45%;
+        @include responsive($medium) {
+            margin: 0 25px;
+        }
 
+        @include responsive($small) {
+            width: 100%;
+        }
 
         .field {
             width: 100%;
             margin-bottom: 40px;
             position: relative;
+            height: 60px;
 
             .hint {
                 display: none;
@@ -120,7 +161,6 @@
         .radios {
             position: relative;
             height: 35px;
-            overflow: hidden;
         }
         input[type="radio"] {
             height: 35px;
@@ -128,7 +168,7 @@
             &:checked,
             &:not(:checked) {
                 position: absolute;
-                left: -100px;
+                left: -11000px;
             }
 
             & + label {
@@ -137,6 +177,10 @@
                 padding: 0;
                 float: left;
                 margin-right: 10px;
+
+            }
+            & + label.error:before {
+                border: 1px solid red;
             }
             & + label:before {
                 content: '';
@@ -177,6 +221,7 @@
         .checkboxes {
             position: relative;
             overflow: hidden;
+            
         }
         input[type="checkbox"] {
             height: 35px;
@@ -194,6 +239,10 @@
                 padding: 0;
                 float: left;
                 margin-right: 10px;
+                font-size: 18px;
+            }
+            & + label.error:before {
+                border: 1px solid red;
             }
             & + label:before {
                 content: '';
@@ -205,6 +254,7 @@
                 background: $white;
                 border: 1px solid $mediumgray;
                 border-radius: 5px;
+                
             }
             & + label:hover:before {
                 border: 1px solid $green;

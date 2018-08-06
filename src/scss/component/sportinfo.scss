@@ -5,14 +5,45 @@
   background-color: $green60;
   height: 170px;
   padding:  0 50px;
-  
+  @include responsive($large) {
+    padding: 0 35px;
+  }
+  @include responsive($medium) {
+    height: 110px;
+  }
+  @include responsive($small) {
+    height: auto;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+  @include responsive($xs) {}
   .infos {
     display: flex;
+    @include responsive($small) {
+      flex-direction: column;
+    }
+    @include responsive($xs) {}
   }
   .info--item {
     display: flex;
     align-items: center;
     margin-right: 50px;
+
+    &:nth-child(n+1) {
+      margin: 10px 0;
+    }
+
+    @include responsive($large) {
+      padding: 0 20px;
+    }
+    @include responsive($medium) {}
+    @include responsive($small) {
+      padding: 0;
+      margin: 0;
+      
+    }
+    @include responsive($xs) {}
   }
   .informations {
     display: flex;
@@ -22,16 +53,32 @@
   .icon {
     color: $green;
     font-size: 90px;
+    
+    @include responsive($medium) {
+      font-size: 70px;
+    }
+    @include responsive($small) {}
+    @include responsive($xs) {}
   }
 
   .smallinfo {
     color: $darkgray;
     font-size: 16px;
+    @include responsive($large) {}
+    @include responsive($medium) {}
+    @include responsive($small) {}
+    @include responsive($xs) {}
   }
 
   .biginfo {
     color: $darkgray;
     font-size: 40px;
+    
+    @include responsive($medium) {
+      font-size: 30px;
+    }
+    @include responsive($small) {}
+    @include responsive($xs) {}
   }
 
 

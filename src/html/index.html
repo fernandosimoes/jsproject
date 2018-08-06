@@ -20,7 +20,7 @@
 
         <div class="header">
             <div class="logo">
-                <img src="./img/logo.jpg" alt="Venturus Sport Logo">
+                <img src="./img/logo.png" alt="Venturus Sport Logo">
                 <span>Venturus Sport</span>
             </div>
             <div class="usermenu">
@@ -171,25 +171,27 @@
                     <h2>Users</h2>
                     <span class="userline"></span>
                 </div>
+                <div class="tablecontent"style="overflow-x: scroll">
 
-                <table id="usertable" class="display">
-                    <thead>
-                        <tr class="table--title">
-                            <th>Username</th>
-                            <th>Name</th>
-                            <th>E-mail</th>
-                            <th>City</th>
-                            <th>Ride in Group</th>
-                            <th>Day of the week</th>
-                            <th>Posts</th>
-                            <th>Albums</th>
-                            <th>Photos</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+                    <table id="usertable" class="display">
+                        <thead>
+                            <tr class="table--title">
+                                <th>Username</th>
+                                <th>Name</th>
+                                <th>E-mail</th>
+                                <th>City</th>
+                                <th>Ride in Group</th>
+                                <th>Day of the week</th>
+                                <th>Posts</th>
+                                <th>Albums</th>
+                                <th>Photos</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="registration">
@@ -254,7 +256,7 @@
                                 </label>
                                 <input type="text" name="city">
                                 <div class="hint">
-                                    Instructions email
+                                    Instructions City
                                 </div>
                             </div>
                             <div class="field">
@@ -292,7 +294,7 @@
                     </div>
                     <div class="buttons">
                         <button id="submitButton" type="button">Save</button>
-                        <button type="reset">Discard</button>
+                        <button id="clearform" type="reset">Discard</button>
                     </div>
                 </form>
             </div>

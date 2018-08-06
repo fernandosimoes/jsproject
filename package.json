@@ -1,9 +1,7 @@
 {
   "name": "jsproject",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp",
-    "build": "gulp build && webpack -p && gulp copy && gulp server",
+    "build": "gulp build && webpack -p && gulp copy && gulp filecopy && gulp server",
     "dev": "gulp dev && webpack -d && gulp copy",
     "dev:watch": "gulp dev && webpack -d && gulp copy && gulp watch",
     "js": "webpack -d",
