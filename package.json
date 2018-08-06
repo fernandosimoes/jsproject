@@ -3,7 +3,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp",
-    "build": "gulp build && webpack -p && gulp copy",
+    "build": "gulp build && webpack -p && gulp copy && gulp server",
     "dev": "gulp dev && webpack -d && gulp copy",
     "dev:watch": "gulp dev && webpack -d && gulp copy && gulp watch",
     "js": "webpack -d",
@@ -18,7 +18,6 @@
   "keywords": [],
   "author": "Fernando Simoes",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.2.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

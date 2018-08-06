@@ -6,6 +6,7 @@ $lightgray: #f8f8f8;
 $mediumgray: #e3e3e3;
 $white: #fff;
 $darkgray: #333333;
+$black: #000;
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -16,3 +17,12 @@ body {
   width: auto;
   padding: 0 50px;
 }
+
+
+// @media (max-width: 575px) { ... }
+
+// @media (max-width: 767px) { ... }
+
+// @media (max-width: 991px) { ... }
+
+// @media (max-width: 1199px) { ... }

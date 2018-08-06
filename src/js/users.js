@@ -2,16 +2,19 @@
 import DataTable from 'vanilla-datatables';
 import axios from 'axios';
 import alertify from 'alertifyjs';
+import { submitEventListener } from './formfunctions';
+
+let table = new DataTable("#usertable",{
+    perPageSelect: false,
+    perPage: 50,
+});
+submitEventListener(table, events)
 
 
 let photos, posts, albums, lielements;
 let groupedItems = []
 
 
-let table = new DataTable("#usertable",{
-    perPageSelect: false,
-    perPage: 50,
-});
 
 // random generate day of the week
 const dayoftheweek = () => {
@@ -158,8 +161,8 @@ const generateTable = () => {
             </a>`,
             rideingroup(),
             dayoftheweek(),
-            user.posts.length,
-            user.albums.length,
+            `<div class="posts">${user.posts.length}</div>`,
+            `<div class="albums">${user.albums.length}</div>`,
             user.photos.length,
             `<div class="trash" data-userid='${user.userId}' data-tableindex='${key}'>   
                 <a>
@@ -193,6 +196,8 @@ const events = () => {
         })
     })
 
+   
+
     
 
 }
@@ -210,7 +215,7 @@ const hideelements = () => {
         if (k == elementslenght) {
             console.log('e', e);
             document.querySelector('.ellipseshide').classList.remove('ellipseshide')
-            document.querySelector('.ellipseshide').classList.add('ellipsesShow')
+            // document.querySelector('.ellipseshide').classList.add('ellipsesShow')
             // <li>
             //     <span>PAGE NAME 1</span>
             //     <div class="arrow">
@@ -219,12 +224,6 @@ const hideelements = () => {
             // </li>
         }
     })
-
-
-    document.querySelector('.ellipsesShow').addEventListener('hover', () => {
-        
-    })
-
 }
 
 const showElements = () => {
@@ -235,17 +234,21 @@ const removeItem = (userId, element) => {
     console.log('element', element)
     const dataindex = element.dataset;
     console.log('dataindex', dataindex)
-
+    /** this block update interface and a request for delete is called */
+    table.rows().remove(dataindex.tableindex);
+    element.remove();
+    alertify.success('Ok') 
+    //end block
+    events()
+    /* in this point i was submit my request to delete to api and in success or error update interface.
     axios.delete(`https://jsonplaceholder.typicode.com/users/${dataindex.userid}`)
     .then(function (response) {
         console.log(response);
         if(response.status == 200 ) {
-            table.rows().remove(dataindex.tableindex);
-            element.remove();
-            alertify.success('Ok') 
-            console.log('groupedItems', groupedItems);
-            events()
         }
     })
+    */
 }
+
+
 

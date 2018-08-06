@@ -37,6 +37,15 @@
       
       td {
         vertical-align: middle;
+
+        .posts {
+          color: $green;
+          cursor: url('../img/cursor.png' ), pointer;
+
+        }
+        .albums {
+          @extend .posts;
+        }
       }
 
       height: 60px;

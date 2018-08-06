@@ -23,6 +23,7 @@ gulp.task('clean', function () {
 
 
 gulp.task('default', ['sass']);
+gulp.task('build', ['clean', 'sass', 'filecopy']);
 gulp.task('watch', ['sass:watch', 'filecopy', 'copy']);
 gulp.task('dev', ['sass:dev', 'filecopy']);
 

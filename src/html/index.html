@@ -140,7 +140,6 @@
                         <i class="fas fa-trophy"></i>
                     </div>
                     <div class="informations">
-
                         <div class="smallinfo">
                             Mode
                         </div>
@@ -165,7 +164,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="users">
             <div class="centerontent">
                 <div class="userTitle">
@@ -193,10 +192,112 @@
                 </table>
             </div>
         </div>
-
         <div class="registration">
+            <div class="centerontent">
+                <div class="registerTitle">
+                    <h2>Registration</h2>
+                    <span class="registerline"></span>
+                </div>
+                <div class="registerinformation">
+                    <div class="info">
+                        <h3>Need help?</h3>
+                        <div class="icon-details">
+                            <i class="far fa-life-ring"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis similique iure sint, repellat et.</p>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h3>Why register?</h3>
+                        <div class="icon-details">
+                            <i class="fas fa-heartbeat"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis similique iure sint, repellat et.</p>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h3>What people are saying...</h3>
+                        <div class="icon-details">
+                            <i class="far fa-smile"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis similique iure sint, repellat et.</p>
+                        </div>
+                    </div>
+                </div>
 
+                <form class="registerform" submit="#" onsubmit="return false">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="field">
+                                <label for="username">Username</label>
+                                <input type="text" name="username">
+                                <div class="hint">
+                                    Instructions username
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="name">Name</label>
+                                <input type="text" name="name">
+                                <div class="hint">
+                                    Instructions name
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email">
+                                <div class="hint">
+                                    Instructions email
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <label for="username">City
+                                    <span>optional</span>
+                                </label>
+                                <input type="text" name="city">
+                                <div class="hint">
+                                    Instructions email
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="name">Ride in group?</label>
+                                <div class="radios">
+                                    <input type="radio" id="always" name="ridegroup" value="Always">
+                                    <label for="always">Always</label>
+                                    <input type="radio" id="sometimes" name="ridegroup" value="Sometimes">
+                                    <label for="sometimes">Sometimes</label>
+                                    <input type="radio" id="never" name="ridegroup" value="Never">
+                                    <label for="never">Never</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="name">Days of the week</label>
+                                <div class="checkboxes">
+                                    <input class="" type="checkbox" id="sun" name="weekday" value="Sun">
+                                    <label class="" for="sun">Sun</label>
+                                    <input class="" type="checkbox" id="mon" name="weekday" value="Mon">
+                                    <label class="" for="mon">Mon</label>
+                                    <input class="" type="checkbox" id="tue" name="weekday" value="Tue">
+                                    <label class="" for="tue">Tue</label>
+                                    <input class="" type="checkbox" id="wed" name="weekday" value="Wed">
+                                    <label class="" for="wed">Wed</label>
+                                    <input class="" type="checkbox" id="thu" name="weekday" value="Thu">
+                                    <label class="" for="thu">Thu</label>
+                                    <input class="" type="checkbox" id="fri" name="weekday" value="Fri">
+                                    <label class="" for="fri">Fri</label>
+                                    <input class="" type="checkbox" id="sat" name="weekday" value="Sat">
+                                    <label class="" for="sat">Sat</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="buttons">
+                        <button id="submitButton" type="button">Save</button>
+                        <button type="reset">Discard</button>
+                    </div>
+                </form>
+            </div>
         </div>
+
 
         <!-- build:js -->
         <!-- endbuild -->

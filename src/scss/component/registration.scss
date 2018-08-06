@@ -1,0 +1,257 @@
+.registration {
+  position: relative;
+    margin-top: 25px;
+
+  .registerTitle {
+    display: flex; 
+    align-items: center;
+  }
+  .registerline {
+    width: 100%;
+    border: 1px solid $mediumgray;
+    margin-left: 45px;
+  }
+
+
+  h2 {
+    margin:  15px 0;
+    font-size: 40px;
+  }
+}
+
+.registerinformation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 0;
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 30%;
+        font-size: 80px;
+        color: $green;
+        flex-direction: column;
+        
+        h3 {
+            font-size: 25px;
+            align-self: flex-start;
+            margin-bottom: 35px;
+        }
+
+        p {
+            font-size: 20px;
+            color: $darkgray;
+            margin-left: 20px;
+        }
+
+        .icon-details {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+.registerform {
+    border-top: 1px solid $mediumgray;
+    width: 80%;
+    padding-top: 40px;
+    margin: 0 auto;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    .column {
+
+        width: 45%;
+
+
+        .field {
+            width: 100%;
+            margin-bottom: 40px;
+            position: relative;
+
+            .hint {
+                display: none;
+                position: absolute;
+                bottom: -20px;
+                color: $mediumgray;
+                font-size: 12px;
+            }
+
+            label {
+                font-size: 20px;
+                margin-bottom: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                span {
+                    font-size: 10px;
+                    color: $mediumgray;
+                }
+            }
+        }
+        input[type="text"],
+        input[type="email"]{
+            height: 30px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid $mediumgray;
+            padding: 0 15px;
+
+            &:focus,
+            &:active{
+                border-color: $green;
+            }
+
+            &:focus + .hint,
+            &:active + .hint {
+                display: block;
+
+            }
+        }
+        .radios {
+            position: relative;
+            height: 35px;
+            overflow: hidden;
+        }
+        input[type="radio"] {
+            height: 35px;
+
+            &:checked,
+            &:not(:checked) {
+                position: absolute;
+                left: -100px;
+            }
+
+            & + label {
+                position: relative;
+                cursor: pointer;
+                padding: 0;
+                float: left;
+                margin-right: 10px;
+            }
+            & + label:before {
+                content: '';
+                margin-right: 10px;
+                display: inline-block;
+                vertical-align: text-top;
+                width: 21px;
+                height: 21px;
+                border-radius: 50px;
+                background: $white;
+                border: 1px solid $mediumgray;
+            }
+            & + label:hover:before {
+                border: 1px solid $green;
+            }
+            & + label:focus:before {
+                box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+            }
+
+            &:checked  + label:before {
+                background: $white;
+                border: 1px solid $green;
+            }
+
+            &:checked + label:after {
+                content: '';
+                width: 12px;
+                height: 12px;
+                background: $black;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                border-radius: 100%;
+                -webkit-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+            }
+        }
+        .checkboxes {
+            position: relative;
+            overflow: hidden;
+        }
+        input[type="checkbox"] {
+            height: 35px;
+            overflow: hidden;
+
+            &:checked,
+            &:not(:checked) {
+                position: absolute;
+                left: -100px;
+            }
+
+            & + label {
+                position: relative;
+                cursor: pointer;
+                padding: 0;
+                float: left;
+                margin-right: 10px;
+            }
+            & + label:before {
+                content: '';
+                margin-right: 10px;
+                display: inline-block;
+                vertical-align: text-top;
+                width: 20px;
+                height: 20px;
+                background: $white;
+                border: 1px solid $mediumgray;
+                border-radius: 5px;
+            }
+            & + label:hover:before {
+                border: 1px solid $green;
+            }
+            & + label:focus:before {
+                box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+            }
+
+            &:checked  + label:before {
+                background: $white;
+                border: 1px solid $green;
+            }
+
+            &:checked + label:after {
+                content: '';
+                position: absolute;
+                left: 5px;
+                top: 9px;
+                background: $green;
+                width: 2px;
+                height: 2px;
+                box-shadow: 
+                2px 0 0 $green,
+                4px 0 0 $green,
+                4px -2px 0 $green,
+                4px -4px 0 $green,
+                4px -6px 0 $green,
+                4px -8px 0 $green;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.buttons {
+    #submitButton {
+        padding: 10px 25px;
+        border: none;
+        cursor: pointer;
+        background: $green;
+        color: $white;
+        font-size: 25px
+    }
+    button[type="reset"] {
+        @extend #submitButton;
+        background: $mediumgray;
+        color: $darkgray;
+        margin-left: 15px;
+    }
+}
