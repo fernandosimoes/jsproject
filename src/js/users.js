@@ -140,8 +140,8 @@ class user {
             </a>`,
                 _self.rideingroup(),
                 _self.dayoftheweek(),
-                user.posts.length,
-                user.albums.length,
+                `<div class="posts">${user.posts.length}</div>`,
+                `<div class="albums">${user.albums.length}</div>`,
                 user.photos.length,
                 `<div class="trash" data-userid='${user.userId}' data-tableindex='${key}'>   
                 <a>
